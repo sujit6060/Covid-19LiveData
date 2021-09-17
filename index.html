@@ -11,9 +11,12 @@
     <div class="container" style="border: 2px solid rgb(245, 242, 242); padding: 20px; background-color: #f15b63;color: white;">
         <h1 class="text-center mt-5" style=" font-weight: 900; font-family: 'Times New Roman', Times, serif;">Covid-19 Live Data</h1>
         <br>
+        <h5 style="text-align: center;">Date/Time: <span id="datetime"></span></h5>
+        <br>
+        <br>
         <table class="table " style="text-align: center;color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
             <tr>
-                <th>ENTIRE WORLD DATA</th>
+                <th>WORLD DATA</th>
             </tr>
             <tr>
                 <th>Total Cases</th>
@@ -46,10 +49,42 @@
 
         <br>
         <br>
+        <table class="table " style="text-align: center; color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
+            <tr>
+                <th>MAHARASHTRA</th>
+            </tr>
+            <tr>
+                <th>Total Cases</th>
+                <th>Total Recoverd</th>
+                <th>Delta Confirmed</th>
+               
+            </tr>
+            <tr id="maharashtraData">
+
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        <table class="table " style="text-align: center; color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
+            <tr>
+                <th>PUNE</th>
+            </tr>
+            <tr>
+                <th>Total Cases</th>
+                <th>Total Recoverd</th>
+                <th>Delta Confirmed</th>
+               
+            </tr>
+            <tr id="puneData">
+
+            </tr>
+
+        </table>
         
     </div>
     
-    <script src="./js/covid.js"></script>
+    <script src="covid.js"></script>
     
 </body>
 </html>

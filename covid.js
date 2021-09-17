@@ -1,3 +1,6 @@
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleString();
+
 function getWorldData(){
     fetch('https://api.covid19api.com/summary')
     .then(response => response.json())
@@ -35,6 +38,45 @@ function getIndiaData(){
 }
 getIndiaData();
 
+
+
+
+function getMaharashtraData(){
+    fetch('https://data.covid19india.org/v4/min/data.min.json')
+    .then(response => response.json())
+    .then(data =>{
+      
+        let maharashtraData = `
+        
+        <td>${data.MH.total.confirmed}</td>
+        <td>${data.MH.total.recovered}</td>
+        <td>${data.MH.delta21_14.confirmed}</td>
+        
+        `
+        document.querySelector('#maharashtraData').innerHTML = maharashtraData;
+    })
+}
+getMaharashtraData();
+
+
+
+function getPuneData(){
+    fetch('https://data.covid19india.org/v4/min/data.min.json')
+    .then(response => response.json())
+    .then(data =>{
+
+        let puneData = `
+        
+        <td>${data.MH.districts.Pune.total.confirmed}</td>
+        <td>${data.MH.districts.Pune.total.recovered}</td>
+        <td>${data.MH.districts.Pune.delta21_14.confirmed}</td>
+       
+        
+        `
+        document.querySelector('#puneData').innerHTML = puneData;
+    })
+}
+getPuneData();
 
 
 
