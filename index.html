@@ -4,87 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Covid-19 Live Data</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            border: 5px solid #f5f2f2;
+            padding: 20px;
+            background-color: #f15b63;
+            border-radius: 10px;
+        }
+        h1 {
+            font-weight: 900;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        table {
+            margin-bottom: 30px;
+        }
+        th, td {
+            text-align: center;
+            font-weight: 900;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 15px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            th, td {
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: black;padding: 20px;">
-    <div class="container" style="border: 2px solid rgb(245, 242, 242); padding: 20px; background-color: #f15b63;color: white;">
-        <h1 class="text-center mt-5" style=" font-weight: 900; font-family: 'Times New Roman', Times, serif;">Covid-19 Live Data</h1>
-        <br>
-        <h5 style="text-align: center;">Date/Time: <span id="datetime"></span></h5>
-        <br>
-        <br>
-        <table class="table " style="text-align: center;color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
-            <tr>
-                <th>WORLD DATA</th>
-            </tr>
-            <tr>
-                <th>Total Cases</th>
-                <th>Total Deaths</th>
-                <th>New Confirmed</th>
-               
-            </tr>
-            <tr id="worldData">
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Covid-19 Live Data</h1>
+        <h5 class="text-center">Date/Time: <span id="datetime"></span></h5>
 
-            </tr>
-
-        </table>
-        <br>
-        <br>
-        <table class="table " style="text-align: center; color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
-            <tr>
-                <th>INDIA</th>
-            </tr>
-            <tr>
-                <th>Total Cases</th>
-                <th>Total Deaths</th>
-                <th>New Confirmed</th>
-               
-            </tr>
-            <tr id="indiaData">
-
-            </tr>
-
+        <table class="table table-striped table-bordered text-white">
+            <thead>
+                <tr><th colspan="3">WORLD DATA</th></tr>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>New Confirmed</th>
+                </tr>
+            </thead>
+            <tbody id="worldData"></tbody>
         </table>
 
-        <br>
-        <br>
-        <table class="table " style="text-align: center; color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
-            <tr>
-                <th>MAHARASHTRA</th>
-            </tr>
-            <tr>
-                <th>Total Cases</th>
-                <th>Total Recoverd</th>
-                <th>Delta Confirmed</th>
-               
-            </tr>
-            <tr id="maharashtraData">
-
-            </tr>
-
+        <table class="table table-striped table-bordered text-white">
+            <thead>
+                <tr><th colspan="3">INDIA</th></tr>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>New Confirmed</th>
+                </tr>
+            </thead>
+            <tbody id="indiaData"></tbody>
         </table>
-        <br>
-        <br>
-        <table class="table " style="text-align: center; color: white;font-weight: 900; font-family: 'Times New Roman', Times, serif;">
-            <tr>
-                <th>PUNE</th>
-            </tr>
-            <tr>
-                <th>Total Cases</th>
-                <th>Total Recoverd</th>
-                <th>Delta Confirmed</th>
-               
-            </tr>
-            <tr id="puneData">
 
-            </tr>
-
+        <table class="table table-striped table-bordered text-white">
+            <thead>
+                <tr><th colspan="3">MAHARASHTRA</th></tr>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Recovered</th>
+                    <th>Delta Confirmed</th>
+                </tr>
+            </thead>
+            <tbody id="maharashtraData"></tbody>
         </table>
-        
+
+        <table class="table table-striped table-bordered text-white">
+            <thead>
+                <tr><th colspan="3">PUNE</th></tr>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Recovered</th>
+                    <th>Delta Confirmed</th>
+                </tr>
+            </thead>
+            <tbody id="puneData"></tbody>
+        </table>
     </div>
-    
+
     <script src="covid.js"></script>
-    
 </body>
 </html>
